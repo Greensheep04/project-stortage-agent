@@ -1,0 +1,25 @@
+{"qid": "ev-01", "query": "找包装破损后暂留待检的记录", "paraphrase": false, "relevant_parent_ids": ["EV-1006", "EV-1014", "EV-1022", "TX-1026", "TX-1055", "TX-1082"]}
+{"qid": "ev-02", "query": "外观有损伤、被留到待检区等待处理的商品记录", "paraphrase": true, "relevant_parent_ids": ["EV-1006", "EV-1014", "EV-1022", "TX-1026", "TX-1055", "TX-1082"]}
+{"qid": "ev-03", "query": "标签贴错退回重新贴标的复核记录", "paraphrase": false, "relevant_parent_ids": ["EV-1010", "EV-1024", "EV-1031", "EV-1033", "EV-1037", "TX-1041", "TX-1086", "TX-1121", "TX-1135", "TX-1151"]}
+{"qid": "ev-04", "query": "商品标签弄错了、退回去重贴的情况有哪些", "paraphrase": true, "relevant_parent_ids": ["EV-1010", "EV-1024", "EV-1031", "EV-1033", "EV-1037", "TX-1041", "TX-1086", "TX-1121", "TX-1135", "TX-1151"]}
+{"qid": "ev-05", "query": "装车时误放到相邻月台的记录", "paraphrase": false, "relevant_parent_ids": ["EV-1025", "EV-1030", "TX-1088", "TX-1119"]}
+{"qid": "ev-06", "query": "货物被错放到旁边月台、后来追回重新清点的情况", "paraphrase": true, "relevant_parent_ids": ["EV-1025", "EV-1030", "TX-1088", "TX-1119"]}
+{"qid": "ev-07", "query": "复核发现原流水数量多录并冲销的记录", "paraphrase": false, "relevant_parent_ids": ["EV-1005", "EV-1012", "EV-1017", "EV-1020", "EV-1021"]}
+{"qid": "ev-08", "query": "数量录入多了、之后做了冲销更正的案例", "paraphrase": true, "relevant_parent_ids": ["EV-1005", "EV-1012", "EV-1017", "EV-1020", "EV-1021"]}
+{"qid": "ev-09", "query": "初录数量后发现多录的流水备注", "paraphrase": false, "relevant_parent_ids": ["TX-1018", "TX-1049", "TX-1065", "TX-1072", "TX-1078"]}
+{"qid": "ev-10", "query": "出库单还是草稿、等待复核过账的记录", "paraphrase": false, "relevant_parent_ids": ["EV-1008", "EV-1009", "EV-1016", "EV-1026", "EV-1039", "TX-1030", "TX-1032", "TX-1059", "TX-1095", "TX-1158"]}
+{"qid": "ev-11", "query": "还没过账、处于草稿状态的出库单有哪些", "paraphrase": true, "relevant_parent_ids": ["EV-1008", "EV-1009", "EV-1016", "EV-1026", "EV-1039", "TX-1030", "TX-1032", "TX-1059", "TX-1095", "TX-1158"]}
+{"qid": "ev-12", "query": "第二车装运的出库记录", "paraphrase": false, "relevant_parent_ids": ["TX-1043", "TX-1084", "TX-1127", "TX-1138", "TX-1141", "TX-1144"]}
+{"qid": "ev-13", "query": "分两批发出、由第二车装走的那部分货", "paraphrase": true, "relevant_parent_ids": ["TX-1043", "TX-1084", "TX-1127", "TX-1138", "TX-1141", "TX-1144"]}
+{"qid": "ev-14", "query": "第一车装运的记录", "paraphrase": false, "relevant_parent_ids": ["TX-1069", "TX-1109", "TX-1152", "TX-1166"]}
+{"qid": "ev-15", "query": "上午完成交接的那批出库流水", "paraphrase": true, "relevant_parent_ids": ["TX-1005", "TX-1028", "TX-1042", "TX-1056", "TX-1067", "TX-1137", "TX-1140", "TX-1143"]}
+{"qid": "ev-16", "query": "扫描出库商品与计划不符按扫描结果登记的记录", "paraphrase": false, "relevant_parent_ids": ["TX-1012", "TX-1016", "TX-1052", "TX-1062", "TX-1090"]}
+{"qid": "ev-17", "query": "实际扫描出来的商品和单据对不上的出库记录", "paraphrase": true, "relevant_parent_ids": ["TX-1012", "TX-1016", "TX-1052", "TX-1062", "TX-1090"]}
+{"qid": "ev-18", "query": "当天剩余数量安排在下午装车发出的记录", "paraphrase": true, "relevant_parent_ids": ["TX-1008", "TX-1010", "TX-1015", "TX-1029", "TX-1057", "TX-1068", "TX-1070", "TX-1104", "TX-1107", "TX-1110"]}
+{"qid": "ev-19", "query": "冲销原流水多录数量的冲销记录", "paraphrase": false, "relevant_parent_ids": ["TX-1019", "TX-1050", "TX-1066", "TX-1073", "TX-1079"]}
+{"qid": "ev-20", "query": "下午才完成交接的出库流水", "paraphrase": true, "relevant_parent_ids": ["TX-1006", "TX-1054", "TX-1153", "TX-1167"]}
+{"qid": "neg-01", "query": "客户投诉陶瓷杯有裂纹要求赔偿的记录", "paraphrase": false, "relevant_parent_ids": []}
+{"qid": "neg-02", "query": "仓库盘点发现库存盘亏的记录", "paraphrase": false, "relevant_parent_ids": []}
+{"qid": "neg-03", "query": "冷链运输温度超标的记录", "paraphrase": false, "relevant_parent_ids": []}
+{"qid": "neg-04", "query": "供应商送货延迟的入库记录", "paraphrase": false, "relevant_parent_ids": []}
+{"qid": "neg-05", "query": "包装材料供应商质量索赔的沟通记录", "paraphrase": false, "relevant_parent_ids": []}

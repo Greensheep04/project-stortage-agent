@@ -1,0 +1,2769 @@
+{
+  "as_of": "2026-09-09T20:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "cases": [
+    {
+      "order_id": "SO-1001",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1001"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1001",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1002"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1002",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1003"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1002",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1004"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1003",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1005",
+        "TX-1006",
+        "EV-1001"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1003",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1007",
+        "TX-1008",
+        "EV-1002"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1004",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 16,
+      "matched_net_shipped_quantity": 16,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1009",
+        "TX-1010",
+        "EV-1003"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1004",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1011"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1005",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 13,
+      "expected_finding": "sku_mismatch",
+      "evidence_ids": [
+        "TX-1012"
+      ],
+      "supported_explanation": "流水TX-1012记录了13件陶瓷杯蓝色（MUG-BL），与计划SKU不一致。",
+      "must_not_claim": [
+        "该SKU已正常发出",
+        "差异仅由缺货导致",
+        "数量无差异"
+      ]
+    },
+    {
+      "order_id": "SO-1005",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1013"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1006",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1014",
+        "TX-1015",
+        "EV-1004"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1006",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 7,
+      "expected_finding": "sku_mismatch",
+      "evidence_ids": [
+        "TX-1016"
+      ],
+      "supported_explanation": "流水TX-1016记录了7件帆布袋黑色（BAG-BK），与计划SKU不一致。",
+      "must_not_claim": [
+        "该SKU已正常发出",
+        "差异仅由缺货导致",
+        "数量无差异"
+      ]
+    },
+    {
+      "order_id": "SO-1007",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1017"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1007",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "reversal_matched",
+      "evidence_ids": [
+        "TX-1018",
+        "TX-1019",
+        "EV-1005"
+      ],
+      "supported_explanation": "原流水TX-1018多录2件，已用TX-1019冲销，净出库量与计划一致。",
+      "must_not_claim": [
+        "原多录流水已删除",
+        "实际多发",
+        "存在数量差异"
+      ]
+    },
+    {
+      "order_id": "SO-1008",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1020"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1008",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 8,
+      "matched_net_shipped_quantity": 8,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1021"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1009",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 1,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1022"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1009",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 2,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1023"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1010",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1024"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1010",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1025",
+        "EV-1044"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1011",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 3,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1026",
+        "EV-1006"
+      ],
+      "supported_explanation": "拣货时发现3件外包装破损，移至待检区。本次先发4件，剩余3件待处理。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1011",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1027"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1012",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1028",
+        "TX-1029",
+        "EV-1007"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1012",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 7,
+      "expected_finding": "draft_only",
+      "evidence_ids": [
+        "TX-1030",
+        "EV-1008"
+      ],
+      "supported_explanation": "存在草稿出库记录，但无已过账有效记录。",
+      "must_not_claim": [
+        "货物实际未发",
+        "已正常出库",
+        "已过账"
+      ]
+    },
+    {
+      "order_id": "SO-1013",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1031"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1013",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 14,
+      "expected_finding": "draft_only",
+      "evidence_ids": [
+        "TX-1032",
+        "EV-1009"
+      ],
+      "supported_explanation": "存在草稿出库记录，但无已过账有效记录。",
+      "must_not_claim": [
+        "货物实际未发",
+        "已正常出库",
+        "已过账"
+      ]
+    },
+    {
+      "order_id": "SO-1014",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1033"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1014",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 5,
+      "expected_finding": "not_due",
+      "evidence_ids": [],
+      "supported_explanation": "约定出库时间为2026-09-10 08:42，尚未到截止时间，不判逾期。",
+      "must_not_claim": [
+        "已逾期",
+        "仓库违约",
+        "客户已签收"
+      ]
+    },
+    {
+      "order_id": "SO-1015",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1034"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1015",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1035"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1016",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1036"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1016",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1037"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1017",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1038"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1017",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1039",
+        "EV-1048"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1018",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1040"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1018",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 16,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 3,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1041",
+        "EV-1010"
+      ],
+      "supported_explanation": "复核发现3件标签贴错，已退回重新贴标。本次先发13件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1019",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1042",
+        "TX-1043",
+        "EV-1011"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1019",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 8,
+      "matched_net_shipped_quantity": 8,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1044"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1020",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1045"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1020",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1046",
+        "EV-1046"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1021",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1047"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1021",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1048"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1022",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "reversal_matched",
+      "evidence_ids": [
+        "TX-1049",
+        "TX-1050",
+        "EV-1012"
+      ],
+      "supported_explanation": "原流水TX-1049多录2件，已用TX-1050冲销，净出库量与计划一致。",
+      "must_not_claim": [
+        "原多录流水已删除",
+        "实际多发",
+        "存在数量差异"
+      ]
+    },
+    {
+      "order_id": "SO-1022",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1051"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1023",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 4,
+      "expected_finding": "sku_mismatch",
+      "evidence_ids": [
+        "TX-1052"
+      ],
+      "supported_explanation": "流水TX-1052记录了4件帆布袋黑色（BAG-BK），与计划SKU不一致。",
+      "must_not_claim": [
+        "该SKU已正常发出",
+        "差异仅由缺货导致",
+        "数量无差异"
+      ]
+    },
+    {
+      "order_id": "SO-1023",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1053",
+        "TX-1054",
+        "EV-1013"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1024",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 1,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1055",
+        "EV-1014"
+      ],
+      "supported_explanation": "拣货时发现1件外包装破损，移至待检区。本次先发4件，剩余1件待处理。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1024",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1056",
+        "TX-1057",
+        "EV-1015"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1025",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1058"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1025",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 13,
+      "expected_finding": "draft_only",
+      "evidence_ids": [
+        "TX-1059",
+        "EV-1016"
+      ],
+      "supported_explanation": "存在草稿出库记录，但无已过账有效记录。",
+      "must_not_claim": [
+        "货物实际未发",
+        "已正常出库",
+        "已过账"
+      ]
+    },
+    {
+      "order_id": "SO-1026",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1060"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1026",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1061"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1027",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 14,
+      "expected_finding": "sku_mismatch",
+      "evidence_ids": [
+        "TX-1062"
+      ],
+      "supported_explanation": "流水TX-1062记录了14件陶瓷杯蓝色（MUG-BL），与计划SKU不一致。",
+      "must_not_claim": [
+        "该SKU已正常发出",
+        "差异仅由缺货导致",
+        "数量无差异"
+      ]
+    },
+    {
+      "order_id": "SO-1027",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1063"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1028",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1064"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1028",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "reversal_matched",
+      "evidence_ids": [
+        "TX-1065",
+        "TX-1066",
+        "EV-1017"
+      ],
+      "supported_explanation": "原流水TX-1065多录1件，已用TX-1066冲销，净出库量与计划一致。",
+      "must_not_claim": [
+        "原多录流水已删除",
+        "实际多发",
+        "存在数量差异"
+      ]
+    },
+    {
+      "order_id": "SO-1029",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 16,
+      "matched_net_shipped_quantity": 16,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1067",
+        "TX-1068",
+        "EV-1018"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1029",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1069",
+        "TX-1070",
+        "EV-1019"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1030",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1071"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1030",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "reversal_matched",
+      "evidence_ids": [
+        "TX-1072",
+        "TX-1073",
+        "EV-1020"
+      ],
+      "supported_explanation": "原流水TX-1072多录1件，已用TX-1073冲销，净出库量与计划一致。",
+      "must_not_claim": [
+        "原多录流水已删除",
+        "实际多发",
+        "存在数量差异"
+      ]
+    },
+    {
+      "order_id": "SO-1031",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1074"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1031",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1075"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1032",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1076"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1032",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1077"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1033",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "reversal_matched",
+      "evidence_ids": [
+        "TX-1078",
+        "TX-1079",
+        "EV-1021"
+      ],
+      "supported_explanation": "原流水TX-1078多录4件，已用TX-1079冲销，净出库量与计划一致。",
+      "must_not_claim": [
+        "原多录流水已删除",
+        "实际多发",
+        "存在数量差异"
+      ]
+    },
+    {
+      "order_id": "SO-1033",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1080"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1034",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1081"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1034",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 2,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1082",
+        "EV-1022"
+      ],
+      "supported_explanation": "拣货时发现2件外包装破损，移至待检区。本次先发9件，剩余2件待处理。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1035",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1083",
+        "TX-1084",
+        "EV-1023"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1035",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1085"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1036",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 7,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1086",
+        "EV-1024"
+      ],
+      "supported_explanation": "复核发现7件标签贴错，已退回重新贴标。本次先发7件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1036",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1087"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1037",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 6,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1088",
+        "EV-1025"
+      ],
+      "supported_explanation": "装车时6件被误放至相邻月台，追回后重新清点。本次实发6件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1037",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 8,
+      "matched_net_shipped_quantity": 8,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1089"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1038",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 12,
+      "expected_finding": "sku_mismatch",
+      "evidence_ids": [
+        "TX-1090"
+      ],
+      "supported_explanation": "流水TX-1090记录了12件陶瓷杯蓝色（MUG-BL），与计划SKU不一致。",
+      "must_not_claim": [
+        "该SKU已正常发出",
+        "差异仅由缺货导致",
+        "数量无差异"
+      ]
+    },
+    {
+      "order_id": "SO-1038",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 8,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 8,
+      "expected_finding": "not_due",
+      "evidence_ids": [],
+      "supported_explanation": "约定出库时间为2026-09-10 03:15，尚未到截止时间，不判逾期。",
+      "must_not_claim": [
+        "已逾期",
+        "仓库违约",
+        "客户已签收"
+      ]
+    },
+    {
+      "order_id": "SO-1039",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1091"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1039",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 16,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 4,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1092"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1040",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1093"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1040",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1094",
+        "EV-1041"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1041",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 9,
+      "expected_finding": "draft_only",
+      "evidence_ids": [
+        "TX-1095",
+        "EV-1026"
+      ],
+      "supported_explanation": "存在草稿出库记录，但无已过账有效记录。",
+      "must_not_claim": [
+        "货物实际未发",
+        "已正常出库",
+        "已过账"
+      ]
+    },
+    {
+      "order_id": "SO-1041",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1096"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1042",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 1,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1097"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1042",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1098"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1043",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1099"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1043",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1100",
+        "EV-1047"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1044",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1101"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1044",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1102"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1045",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1103",
+        "TX-1104",
+        "EV-1027"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1045",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1105"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1046",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1106",
+        "TX-1107",
+        "EV-1028"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1046",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1108"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1047",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1109",
+        "TX-1110",
+        "EV-1029"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1047",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1111"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1048",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1112"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1048",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1113"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1049",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1114"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1049",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1115"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1050",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 3,
+      "difference_quantity": 2,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1116"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1050",
+      "order_line_id": "002",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 6,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1117"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1051",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1118"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1052",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 2,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1119",
+        "EV-1030"
+      ],
+      "supported_explanation": "装车时2件被误放至相邻月台，追回后重新清点。本次实发5件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1053",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1120"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1054",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 1,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1121",
+        "EV-1031"
+      ],
+      "supported_explanation": "复核发现1件标签贴错，已退回重新贴标。本次先发14件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1055",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1122",
+        "EV-1043"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1056",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1123"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1057",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1124"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1058",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1125"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1059",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1126",
+        "TX-1127",
+        "EV-1032"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1060",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1128"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1061",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1129"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1062",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1130"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1063",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 12,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1131"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1064",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1132",
+        "EV-1042"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1065",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1133"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1066",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1134"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1067",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 12,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 3,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1135",
+        "EV-1033"
+      ],
+      "supported_explanation": "复核发现3件标签贴错，已退回重新贴标。本次先发9件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1068",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1136"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1069",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 16,
+      "matched_net_shipped_quantity": 16,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1137",
+        "TX-1138",
+        "EV-1034"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1070",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 8,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 8,
+      "expected_finding": "not_due",
+      "evidence_ids": [],
+      "supported_explanation": "约定出库时间为2026-09-11 10:54，尚未到截止时间，不判逾期。",
+      "must_not_claim": [
+        "已逾期",
+        "仓库违约",
+        "客户已签收"
+      ]
+    },
+    {
+      "order_id": "SO-1071",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1139"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1072",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1140",
+        "TX-1141",
+        "EV-1035"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1073",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1142"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1074",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 16,
+      "matched_net_shipped_quantity": 16,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1143",
+        "TX-1144",
+        "EV-1036"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1075",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 3,
+      "difference_quantity": 2,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1145"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1076",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1146",
+        "EV-1045"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1077",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 5,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1147"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1078",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1148"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1079",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 11,
+      "matched_net_shipped_quantity": 11,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1149"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1080",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1150"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1081",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 3,
+      "difference_quantity": 2,
+      "expected_finding": "quantity_difference",
+      "evidence_ids": [
+        "TX-1151",
+        "EV-1037"
+      ],
+      "supported_explanation": "复核发现2件标签贴错，已退回重新贴标。本次先发3件。",
+      "must_not_claim": [
+        "已经补发",
+        "客户已签收全部",
+        "已经报废"
+      ]
+    },
+    {
+      "order_id": "SO-1082",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1152",
+        "TX-1153",
+        "EV-1038"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1083",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 5,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 1,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1154"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1084",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1155"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1085",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1156"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1086",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1157"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1087",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 15,
+      "expected_finding": "draft_only",
+      "evidence_ids": [
+        "TX-1158",
+        "EV-1039"
+      ],
+      "supported_explanation": "存在草稿出库记录，但无已过账有效记录。",
+      "must_not_claim": [
+        "货物实际未发",
+        "已正常出库",
+        "已过账"
+      ]
+    },
+    {
+      "order_id": "SO-1088",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 14,
+      "expected_finding": "not_due",
+      "evidence_ids": [],
+      "supported_explanation": "约定出库时间为2026-09-10 15:04，尚未到截止时间，不判逾期。",
+      "must_not_claim": [
+        "已逾期",
+        "仓库违约",
+        "客户已签收"
+      ]
+    },
+    {
+      "order_id": "SO-1089",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 4,
+      "matched_net_shipped_quantity": 4,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1159"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1090",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 7,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1160"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1091",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 8,
+      "matched_net_shipped_quantity": 8,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1161"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1092",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 13,
+      "matched_net_shipped_quantity": 13,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1162"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1093",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 14,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1163"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1094",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 6,
+      "matched_net_shipped_quantity": 6,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1164"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1095",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 14,
+      "matched_net_shipped_quantity": 0,
+      "difference_quantity": 14,
+      "expected_finding": "not_due",
+      "evidence_ids": [],
+      "supported_explanation": "约定出库时间为2026-09-10 14:15，尚未到截止时间，不判逾期。",
+      "must_not_claim": [
+        "已逾期",
+        "仓库违约",
+        "客户已签收"
+      ]
+    },
+    {
+      "order_id": "SO-1096",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 15,
+      "matched_net_shipped_quantity": 15,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1165"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1097",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "split_matched",
+      "evidence_ids": [
+        "TX-1166",
+        "TX-1167",
+        "EV-1040"
+      ],
+      "supported_explanation": "分两批出库，合计数量与计划一致。",
+      "must_not_claim": [
+        "重复出库",
+        "数量差异",
+        "SKU不一致"
+      ]
+    },
+    {
+      "order_id": "SO-1098",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 10,
+      "matched_net_shipped_quantity": 10,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1168"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    },
+    {
+      "order_id": "SO-1099",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 7,
+      "matched_net_shipped_quantity": 5,
+      "difference_quantity": 2,
+      "expected_finding": "insufficient_evidence",
+      "evidence_ids": [
+        "TX-1169"
+      ],
+      "supported_explanation": "现有记录不足以确定原因。",
+      "must_not_claim": [
+        "已经报废",
+        "客户拒收",
+        "仓库漏发"
+      ]
+    },
+    {
+      "order_id": "SO-1100",
+      "order_line_id": "001",
+      "question": "这条订单明细到截止时间还差多少，现有资料如何解释？",
+      "expected_quantity": 9,
+      "matched_net_shipped_quantity": 9,
+      "difference_quantity": 0,
+      "expected_finding": "matched",
+      "evidence_ids": [
+        "TX-1170"
+      ],
+      "supported_explanation": "销售出库数量与计划一致。",
+      "must_not_claim": [
+        "存在数量差异",
+        "存在SKU不一致",
+        "分批出库"
+      ]
+    }
+  ]
+}

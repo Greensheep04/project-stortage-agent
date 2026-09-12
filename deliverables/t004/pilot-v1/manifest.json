@@ -1,0 +1,39 @@
+{
+  "version": "pilot-v1",
+  "created_at": "2026-09-11T00:22:56.875018+08:00",
+  "files": [
+    {
+      "name": "events.jsonl",
+      "count": 24,
+      "sha256": "894e64554e06f7323b725cfce7a1e4c50ff6235bc0972c210bed5fbd83e0a853"
+    },
+    {
+      "name": "cases.jsonl",
+      "count": 12,
+      "sha256": "c9506fe2961c662ade6c4ffc7a0537ef20597a43989fa532956ef09b337bbe6b"
+    },
+    {
+      "name": "sops.jsonl",
+      "count": 4,
+      "sha256": "c13a1bb3a05575f50de2f40c754f0fafc81afc2dc06eac196903b35b229e66e5"
+    },
+    {
+      "name": "review/scenarios.jsonl",
+      "count": 16,
+      "sha256": "052e1e46821016ea2f7198b2d5842cb78626fd79987ced696e02d47c9d74f444"
+    }
+  ],
+  "source_snapshot": {
+    "file": "deliverables/仓储异常测试数据.xlsx",
+    "sha256": "61edff98759f2697c5489d2dd2fd4962637ea38982601d219e6b40a37ddd1df1"
+  },
+  "generation": {
+    "method": "模型会话直接撰写（deepseek-v4-flash），无 DashScope API 调用",
+    "model_docs": 40,
+    "script_docs": 0,
+    "manual_docs": 0,
+    "dashscope_api_calls": 0,
+    "estimated_cost_cny": 0
+  },
+  "notes": "40 篇父文档：24 事件＋12 案例＋4 SOP；review/scenarios.jsonl 为审查辅助材料，不进入业务正文。"
+}

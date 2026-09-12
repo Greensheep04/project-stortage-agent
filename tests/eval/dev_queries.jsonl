@@ -1,0 +1,10 @@
+{"qid": "dev-01", "query": "外包装破损移至待检区", "relevant_parent_ids": ["EV-1006", "EV-1014", "EV-1022", "TX-1026", "TX-1055", "TX-1082"]}
+{"qid": "dev-02", "query": "冲销多录的数量", "relevant_parent_ids": ["EV-1005", "EV-1012", "EV-1017", "EV-1020", "EV-1021", "TX-1019", "TX-1050", "TX-1066", "TX-1073", "TX-1079"]}
+{"qid": "dev-03", "query": "草稿待复核", "relevant_parent_ids": ["EV-1008", "EV-1009", "EV-1016", "EV-1026", "EV-1039", "TX-1030", "TX-1032", "TX-1059", "TX-1095", "TX-1158"]}
+{"qid": "dev-04", "query": "第二车装运", "relevant_parent_ids": ["TX-1043", "TX-1084", "TX-1127", "TX-1138", "TX-1141", "TX-1144"]}
+{"qid": "dev-05", "query": "标签贴错", "relevant_parent_ids": ["EV-1010", "EV-1024", "EV-1031", "EV-1033", "EV-1037", "TX-1041", "TX-1086", "TX-1121", "TX-1135", "TX-1151"]}
+{"qid": "dev-06", "query": "误放月台追回", "relevant_parent_ids": ["EV-1025", "EV-1030", "TX-1088", "TX-1119"]}
+{"qid": "dev-07", "query": "第一车装运", "relevant_parent_ids": ["TX-1069", "TX-1109", "TX-1152", "TX-1166"]}
+{"qid": "dev-08", "query": "上午交接", "relevant_parent_ids": ["TX-1005", "TX-1028", "TX-1042", "TX-1056", "TX-1067", "TX-1137", "TX-1140", "TX-1143"]}
+{"qid": "dev-09", "query": "剩余件下午装车", "relevant_parent_ids": ["TX-1008", "TX-1010", "TX-1015", "TX-1029", "TX-1057", "TX-1068", "TX-1070", "TX-1104", "TX-1107", "TX-1110"]}
+{"qid": "dev-10", "query": "按扫描结果登记出库", "relevant_parent_ids": ["TX-1012", "TX-1016", "TX-1052", "TX-1062", "TX-1090"]}

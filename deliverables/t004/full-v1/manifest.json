@@ -1,0 +1,227 @@
+{
+  "version": "full-v1",
+  "created_at": "2026-09-11T01:17:03.467260+08:00",
+  "files": [
+    {
+      "name": "events.jsonl",
+      "count": 700,
+      "sha256": "818910bbbb6a90838312a23aa8176f2dea4ae87014e91b352b62612da19e2fef"
+    },
+    {
+      "name": "cases.jsonl",
+      "count": 280,
+      "sha256": "fd127c7c90b31395fb09a03f6e0159a6b3c7a974ef22fa8208b70e0014118b34"
+    },
+    {
+      "name": "sops.jsonl",
+      "count": 20,
+      "sha256": "0f360b5e06343924c13f866f2a9eaa42df52b9da5918b18505bb27fca213063a"
+    },
+    {
+      "name": "review/scenarios.jsonl",
+      "count": 71,
+      "sha256": "965a9c502ba8fb2a191945acfc504f52d5a0ece6f6404889e344fea9cd383cfd"
+    }
+  ],
+  "source_snapshot": {
+    "file": "deliverables/仓储异常测试数据.xlsx",
+    "sha256": "61edff98759f2697c5489d2dd2fd4962637ea38982601d219e6b40a37ddd1df1"
+  },
+  "generation": {
+    "method": "会话内模型生成；试样 pilot-v1 原样并入；事件按角度+事实分批，案例按主题轴×MDS 变体（R2 重构）",
+    "pilot_docs": 40,
+    "new_docs": 960,
+    "dashscope_api_calls": 0,
+    "estimated_cost_cny": 0,
+    "batches": [
+      {
+        "batch": "E1",
+        "doc_id_range": [
+          "EVX-0025",
+          "EVX-0124"
+        ],
+        "count": 100,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "E2",
+        "doc_id_range": [
+          "EVX-0125",
+          "EVX-0224"
+        ],
+        "count": 100,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "E3",
+        "doc_id_range": [
+          "EVX-0225",
+          "EVX-0324"
+        ],
+        "count": 100,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "E4",
+        "doc_id_range": [
+          "EVX-0325",
+          "EVX-0424"
+        ],
+        "count": 100,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "E5",
+        "doc_id_range": [
+          "EVX-0425",
+          "EVX-0524"
+        ],
+        "count": 100,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "E6",
+        "doc_id_range": [
+          "EVX-0525",
+          "EVX-0624"
+        ],
+        "count": 100,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "E7",
+        "doc_id_range": [
+          "EVX-0625",
+          "EVX-0700"
+        ],
+        "count": 76,
+        "method": "会话内模型生成（模板+事实槽位）",
+        "part": "events"
+      },
+      {
+        "batch": "C1",
+        "doc_id_range": [
+          "CASE-0013",
+          "CASE-0062"
+        ],
+        "count": 50,
+        "method": "会话内模型生成（主题轴×MDS 变体，R2 重构）",
+        "part": "cases"
+      },
+      {
+        "batch": "C2",
+        "doc_id_range": [
+          "CASE-0063",
+          "CASE-0112"
+        ],
+        "count": 50,
+        "method": "会话内模型生成（主题轴×MDS 变体，R2 重构）",
+        "part": "cases"
+      },
+      {
+        "batch": "C3",
+        "doc_id_range": [
+          "CASE-0113",
+          "CASE-0162"
+        ],
+        "count": 50,
+        "method": "会话内模型生成（主题轴×MDS 变体，R2 重构）",
+        "part": "cases"
+      },
+      {
+        "batch": "C4",
+        "doc_id_range": [
+          "CASE-0163",
+          "CASE-0212"
+        ],
+        "count": 50,
+        "method": "会话内模型生成（主题轴×MDS 变体，R2 重构）",
+        "part": "cases"
+      },
+      {
+        "batch": "C5",
+        "doc_id_range": [
+          "CASE-0213",
+          "CASE-0262"
+        ],
+        "count": 50,
+        "method": "会话内模型生成（主题轴×MDS 变体，R2 重构）",
+        "part": "cases"
+      },
+      {
+        "batch": "C6",
+        "doc_id_range": [
+          "CASE-0263",
+          "CASE-0280"
+        ],
+        "count": 18,
+        "method": "会话内模型生成（主题轴×MDS 变体，R2 重构）",
+        "part": "cases"
+      },
+      {
+        "part": "sops",
+        "batch": "S1",
+        "doc_id_range": [
+          "SOP-DRAFT-v1",
+          "SOP-ARCHIVE-v2"
+        ],
+        "count": 16,
+        "method": "会话内模型手写"
+      },
+      {
+        "part": "scenarios",
+        "batch": "N1",
+        "doc_id_range": [
+          "SCN-017",
+          "SCN-071"
+        ],
+        "count": 55,
+        "method": "会话内模型生成"
+      }
+    ],
+    "failures_revisions": [
+      {
+        "part": "events",
+        "issue": "禁补明细曾混入通用运营事件",
+        "fix": "禁补明细只生成待查事件（10 个明细各 1 篇）"
+      },
+      {
+        "part": "events",
+        "issue": "补录事件记录时间被数据截止时间截断",
+        "fix": "补录选行改为事发较早的 12 个明细"
+      },
+      {
+        "part": "events",
+        "issue": "标签数量提取把 3 件与 13 件连成 313",
+        "fix": "改为按发现(\\d+)件 正则提取"
+      },
+      {
+        "part": "cases",
+        "issue": "扩展句在同一文档内重复",
+        "fix": "生成器对同文档句子去重"
+      },
+      {
+        "part": "all",
+        "issue": "R1：句内整句重复（events 120/700、cases 268/280、sops 9/20）",
+        "fix": "统一句级去重（精确/包含/近义），句内重复=0；事件补句改为从未用句选取"
+      },
+      {
+        "part": "cases",
+        "issue": "R2：同题变体无实质差异、填充句 25% 复用",
+        "fix": "改为三轴（背景/路径/结局）×MDS 码变体，标题带情形后缀，填充句按轴选项主题化；整句最高共用 21 篇（≤40）"
+      }
+    ],
+    "scaling": {
+      "case_variant_model": "每主题三轴（背景/核查路径/结局）各 3 个实质选项，用 (x,y,z=x+y mod 3) 的 MDS 码生成两两至少两维不同的变体；单主题容量 = 选项数²",
+      "current_capacity": "35 主题 × 8 变体 = 280 篇（含试样 12）",
+      "expansion_note": "扩到 1 万/5 万篇时，增补各轴选项（如每轴 10 项 → 单主题 100 变体）并增加主题数即可；生成器与质量校验（维度差异、句频上限、近似候选）无需改架构"
+    }
+  },
+  "notes": "700 事件 + 280 案例 + 20 SOP（10 政策×2 版）；review/scenarios.jsonl 70 组，仅供审查。"
+}

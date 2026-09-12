@@ -1,0 +1,101 @@
+{
+  "version": "full-v2",
+  "based_on": "full-v1",
+  "created_at": "2026-09-11T01:44:06.779795+08:00",
+  "files": [
+    {
+      "name": "events.jsonl",
+      "count": 700,
+      "sha256": "5a6f51d1c0a2977ecfdae889340a6f6ebff8c2aee4d554fbb95d8abab45ec57e"
+    },
+    {
+      "name": "cases.jsonl",
+      "count": 280,
+      "sha256": "a79f44ee56b767b141070c751c9ca5b521853c94019b08738ee77526b861dd29"
+    },
+    {
+      "name": "sops.jsonl",
+      "count": 20,
+      "sha256": "0f360b5e06343924c13f866f2a9eaa42df52b9da5918b18505bb27fca213063a"
+    },
+    {
+      "name": "review/scenarios.jsonl",
+      "count": 71,
+      "sha256": "93aedd4bb914bcfba3be935c139f78ad551eea1b8b5ab964039d5873a85d43d9"
+    }
+  ],
+  "source_snapshot": {
+    "file": "deliverables/仓储异常测试数据.xlsx",
+    "sha256": "61edff98759f2697c5489d2dd2fd4962637ea38982601d219e6b40a37ddd1df1"
+  },
+  "generation": {
+    "method": "T-004c 时间一致性修正版：事件生成按 recorded_at 过滤来源与正文，案例按正文月份定时间",
+    "pilot_docs": 40,
+    "new_docs": 960,
+    "dashscope_api_calls": 0,
+    "estimated_cost_cny": 0,
+    "batches": [
+      {
+        "part": "pilot",
+        "batch": "P1",
+        "doc_id_range": [
+          "EVX-0001",
+          "EVX-0024"
+        ],
+        "count": 24,
+        "method": "pilot-v1 原样 + 2 处定向修正"
+      },
+      {
+        "part": "events",
+        "batch": "E1",
+        "doc_id_range": [
+          "EVX-0025",
+          "EVX-0700"
+        ],
+        "count": 676,
+        "method": "T-004c 可见性过滤重生成"
+      },
+      {
+        "part": "cases",
+        "batch": "C1",
+        "doc_id_range": [
+          "CASE-0013",
+          "CASE-0280"
+        ],
+        "count": 268,
+        "method": "T-004c 月份自洽重生成"
+      },
+      {
+        "part": "sops",
+        "batch": "S1",
+        "doc_id_range": [
+          "SOP-DRAFT-v1",
+          "SOP-ARCHIVE-v2"
+        ],
+        "count": 16,
+        "method": "沿用 T-004b 组装（无时间问题）"
+      },
+      {
+        "part": "scenarios",
+        "batch": "N1",
+        "doc_id_range": [
+          "SCN-017",
+          "SCN-071"
+        ],
+        "count": 55,
+        "method": "沿用 T-004b 场景（可见性已核对）"
+      }
+    ]
+  },
+  "corrections": {
+    "scope": "full-v1 → full-v2",
+    "pilot": "去掉记录时点（9-08 17:05）之后才记录的业务说明第 12 行；正文事实由可见流水 TX-1042/TX-1043 支持；结案为 7 月，原句出现未来月份“九月”；改为不指向未来批次的表述",
+    "event_method": "按每篇 recorded_at 过滤 source_refs/transaction_ids/正文（summary 只列可见流水）；关键来源晚于事件时把事件发生/记录时间顺延到来源之后",
+    "case_method": "正文出现月份时，结案/记录时间落在该月并重算 rule_refs；无月份表述的保持原分布",
+    "affected_events": 446,
+    "affected_cases": 3,
+    "affected_list_file": ".tmp/t004/v2_affected.json（由 L5 证据目录保存）",
+    "scenarios_count_fixed": "scenarios 计数修正为 71（原 full-v1 manifest 备注写 70）"
+  },
+  "notes": "700 事件 + 280 案例 + 20 SOP + 71 场景；pilot-v1/full-v1 保留为历史。"
+}

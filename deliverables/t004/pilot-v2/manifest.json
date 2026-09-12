@@ -1,0 +1,45 @@
+{
+  "version": "pilot-v2",
+  "based_on": "pilot-v1",
+  "created_at": "2026-09-11T01:44:06.762919+08:00",
+  "files": [
+    {
+      "name": "events.jsonl",
+      "count": 24,
+      "sha256": "2259d2a0f8f685e63c392d2644c407ffcf009b69af67099929cbecca3f3c3457"
+    },
+    {
+      "name": "cases.jsonl",
+      "count": 12,
+      "sha256": "00bddf8614f2351531c38f21f17752114675f39bf155372b14db36326963dd08"
+    },
+    {
+      "name": "sops.jsonl",
+      "count": 4,
+      "sha256": "c13a1bb3a05575f50de2f40c754f0fafc81afc2dc06eac196903b35b229e66e5"
+    },
+    {
+      "name": "review/scenarios.jsonl",
+      "count": 16,
+      "sha256": "02e5b1225ed54115dfe219320b687c168c8f7eead28e5413230aef9ea7f617eb"
+    }
+  ],
+  "corrections": [
+    {
+      "doc_id": "EVX-0020",
+      "issue": "未来来源引用",
+      "fix": "去掉记录时点（9-08 17:05）之后才记录的业务说明第 12 行；正文事实由可见流水 TX-1042/TX-1043 支持"
+    },
+    {
+      "doc_id": "CASE-0001",
+      "issue": "案例时间自洽",
+      "fix": "结案为 7 月，原句出现未来月份“九月”；改为不指向未来批次的表述"
+    },
+    {
+      "doc_id": "SCN-011",
+      "issue": "场景关联事件可见性",
+      "fix": "原关联事件 EVX-0013 记录于 9-09，晚于场景 cutoff 9-07；换为 cutoff 前可见的 SKU 不符事件 EVX-0011（记录 9-05）"
+    }
+  ],
+  "notes": "T-004c 时间一致性修正；未受影响试样原样保留，pilot-v1 保留为历史。"
+}

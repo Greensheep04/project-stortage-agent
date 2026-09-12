@@ -1,0 +1,28 @@
+[project]
+name = "pi-market"
+version = "0.1.0"
+description = "只读异常调查 RAG（T-002）"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1",
+    "psycopg[binary]>=3.2",
+    "openai>=1.50",
+    "python-dotenv>=1.0",
+    "mcp>=2.2.0,<3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+pi-market = "pi_market.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

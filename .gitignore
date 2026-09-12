@@ -1,0 +1,29 @@
+# 本任务运行数据与临时产物（不入版本控制）
+.local/
+.cache/
+.tmp/
+
+# 凭据（禁止入库、禁止进入报告）
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# 机器杂项
+.DS_Store
+*.log
+.venv/
+
+# 报告/临时输出
+report.json
+
+# 不随公开发布的项目档案（本地保留）
+docs/
+AGENTS.md
+inputs/
+outputs/
